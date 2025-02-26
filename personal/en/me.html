@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O OOO</title>
+
+    <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* 左中右分布 */
+            align-items: center;
+            padding: 15px 35px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: black;
+        }
+
+        .logo {
+            list-style: none;
+            display: flex;
+            gap: 50px; /* Logo 文字间距 */
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .logo a {
+            text-decoration: none; /* 取消原来样式 */
+            color: black;
+            font-size: 70px;
+            transition: all 0.3s ease; /* 平滑效果 */
+        }
+
+        .language {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language a {
+            text-decoration: none; /* 取消原来样式 */
+            color: black;
+            font-size: 20px;
+            transition: all 0.3s ease; /* 平滑效果 */
+        }
+
+        /* 悬停效果 */
+        .logo a:hover, .language a:hover {
+            text-decoration: underline; /* 悬浮后加下划线 */
+            color: hwb(225 0% 0%);
+        }
+
+        .body {
+            margin-top: 180px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Left: LOGO -->
+        <div class="logo">
+            <a href="index.html"><img src="../../assets/img/logo_top.png" alt="OZEN Logo"></a>
+            <a href="projects.html">PROJECT+</a>
+            <a href="me.html">ME.</a>
+        </div>
+
+        <!-- Right: Language -->
+        <div class="language">
+            <a href="index.html">EN</a>
+            <p>/</p>
+            <a href="../zh/index.html">中</a>
+        </div>
+    </nav>
+
+    <div class="body">
+        <br><br><br><br><br><br><br><br><br> 
+        <h1>Education</h1><br><br>
+        <p>
+            2019-2024 Zhejiang University, Bachelor<br>
+            2024-now  TU Delft, Master<br>
+
+        <br><br><br><br><br><br> 
+        <h1>Contact</h1><br><br>
+        <p>EMAIL: zengzhengwu2001@outlook.com</p>
+        <p>TELEPHONE: +86 13325911162</p>
+        <p>ADDRESS: Delft, NL / Hangzhou, CN</p>
+        <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>
