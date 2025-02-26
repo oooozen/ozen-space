@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O OOO</title>
+
+    <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* 左中右分布 */
+            align-items: center;
+            padding: 15px 35px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: black;
+        }
+
+        .logo {
+            list-style: none;
+            display: flex;
+            gap: 50px; /* Logo 文字间距 */
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .logo a {
+            text-decoration: none; /* 取消原来样式 */
+            color: black;
+            font-size: 70px;
+            transition: all 0.3s ease; /* 平滑效果 */
+        }
+
+        .language {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language a {
+            text-decoration: none; /* 取消原来样式 */
+            color: black;
+            font-size: 20px;
+            transition: all 0.3s ease; /* 平滑效果 */
+        }
+
+        /* 悬停效果 */
+        .logo a:hover, .language a:hover {
+            text-decoration: underline; /* 悬浮后加下划线 */
+            color: hwb(225 0% 0%);
+        }
+
+        .body {
+            margin-top: 180px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Left: LOGO -->
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="OZEN Logo"></a>
+            <a href="projects.html">項目+</a>
+            <a href="me.html">本人.</a>
+        </div>
+
+        <!-- Right: Language -->
+        <div class="language">
+            <a href="index.html">英</a>
+            <p>/</p>
+            <a href="chinese.html">中</a>
+        </div>
+    </nav>
+
+    <div class="body">
+        <br><br><br>
+        <img src="logo2.png" alt="Look" width="900">
+        <br><br><br><br>
+        <h1>嗨，我是曾正午</h1>
+        <p>请下滑以了解更多</p>
+        <br>
+        <h2>↓</h2>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <a href="me.html">
+            <img src="myphoto.jpg" alt="Look" width="500">
+        </a>
+
+        <br><br><br><br>
+        <p> 我來自杭州， <br>目前是一名建築學學生<br><br>
+            我于<strong>浙江大學</strong> <br>取得建築學學士學位，<br>
+            <br>
+            目前正在荷蘭<br>
+            <strong>代尔夫特理工大学</strong><br>攻讀碩士學位。
+        </p>
+
+        <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <a href="#"><h1>頂部↑</h1></a>
+        <br>
+    </div>
+</body>
+</html>
