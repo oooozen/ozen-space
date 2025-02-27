@@ -15,7 +15,7 @@ body {
 
     padding: 250px 180px;
 
-    background-color: ;
+    background-color:;
 }
 
 a {
@@ -23,7 +23,7 @@ a {
     color: inherit;
 }
 
-
+/*导航*/
 .navbar {
     display: flex;
     justify-content: space-between; /* 左中右分布 */
@@ -51,47 +51,135 @@ a {
 }
 
 .logo {
-height: 100%;
+    display: inline-block;
+    height: 100%;
+    width:auto;
+    position:relative;
 }
 
-.logo img{
+.logo a {
+    display: inline-block;
+    width: auto;
     height: 100%;
+    position: relative;
 }
+
+.logo a .logo_default {
+    display: block;
+    width: auto;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo a .logo_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:auto;
+    height:100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo a:hover .logo_hover {
+    opacity: 1}
+
+.logo a:hover .logo_default {
+    opacity: 1}
 
 .topleft a {
-    text-decoration: none;
-    color: black;
     font-size: 100px; /*左上角文字大小*/
-    transition: all 0.3s ease;
 }
 
 .topright {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
-
-    background-color:; 
+    align-items:baseline;
+    gap: 0;
 }
 
 .topright a {
-    text-decoration: none;
-    color: black;
-    font-size: 25px; /*右上角文字大小*/
-    transition: all 0.3s ease;
+    position: relative;
+    font-size: 20px; /*右上角文字大小*/
+    font-weight: 600;
 }
 
+.topright a span {
+    display: inline-block;
+    position: relative;
+    padding:0 15px;
+    line-height: 1;
+}
 
-/* 悬停效果 */
-.topleft a:hover, .topright a:hover {
-    text-decoration: underline;
+.topright a span:not([data-type="selected"])::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    top: -80%;
+    width: 100%;
+    height: 180%;
+    transform: scaleY(calc(8/180));
+    transform-origin: top;
+
+    background-color: black;
+}
+
+.topright a span[data-type="selected"]::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    top: -80%;
+    width: 100%;
+    height: 180%;
+    transform: scaleY(calc(45/180));
+    transform-origin: top;
+
+    background-color: black;
+}
+
+.topright a span:hover::after{
+    transform: scaleY(calc(45/180));
+    background-color: hwb(225 0% 0%);
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+/*悬停*/
+.topleft a {
+    position: relative; /*让子元素相对于 a 进行定位*/
+    display: inline-block; /*让a标签变为块级，避免旋转时错位*/
+}
+
+.topleft a:not(.logo a):hover {
     color: hwb(225 0% 0%);
     transform: rotate(5deg);
-    transition: 0.25s;
+    z-index: 1;
 }
 
-.topleft a:active, .topright a:active {
-    text-decoration: underline;
-    color: hwb(225 0% 0%);
-    transform: rotate(0deg);
-    transition: 0.15s;
+.topleft a:not(.logo a):after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+
+    background-color: hwb(225 0% 0%);
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.topleft a:not(.logo a):hover::after {
+    background-color: hwb(225 0% 0%);
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.topleft a, .topleft a:not(.logo a):hover::after {
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s;
 }
