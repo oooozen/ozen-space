@@ -25,30 +25,30 @@
             color: black;
         }
 
-        .logo {
+        .topleft {
             list-style: none;
             display: flex;
             gap: 50px; /* Logo 文字间距 */
         }
 
-        .logo img {
+        .topleft img {
             height: 100px;
         }
 
-        .logo a {
+        .topleft a {
             text-decoration: none; /* 取消原来样式 */
             color: black;
             font-size: 70px;
             transition: all 0.3s ease; /* 平滑效果 */
         }
 
-        .language {
+        .topright {
             list-style: none;
             display: flex;
             gap: 10px;
         }
 
-        .language a {
+        .topright a {
             text-decoration: none; /* 取消原来样式 */
             color: black;
             font-size: 20px;
@@ -56,7 +56,7 @@
         }
 
         /* 悬停效果 */
-        .logo a:hover, .language a:hover {
+        .topleft a:hover, .topright a:hover {
             text-decoration: underline; /* 悬浮后加下划线 */
             color: hwb(225 0% 0%);
         }
@@ -79,14 +79,14 @@
 <body>
     <nav class="navbar">
         <!-- Left: LOGO -->
-        <div class="logo">
+        <div class="topleft">
             <a href="index.html"><img src="../../assets/img/logo_top.png" alt="OZEN Logo"></a>
             <a href="projects.html">PROJECT+</a>
             <a href="me.html">ME.</a>
         </div>
 
-        <!-- Right: Language -->
-        <div class="language">
+        <!-- Right: topright -->
+        <div class="topright">
             <a href="index.html">EN</a>
             <p>/</p>
             <a href="../zh/index.html">中</a>

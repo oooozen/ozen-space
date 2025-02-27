@@ -4,94 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O OOO</title>
-
-    <style>
-        /* 重置默认样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between; /* 左中右分布 */
-            align-items: center;
-            padding: 15px 35px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: black;
-        }
-
-        .logo {
-            list-style: none;
-            display: flex;
-            gap: 50px; /* Logo 文字间距 */
-        }
-
-        .logo img {
-            height: 100px;
-        }
-
-        .logo a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 70px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        .language {
-            list-style: none;
-            display: flex;
-            gap: 10px;
-        }
-
-        .language a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 20px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        /* 悬停效果 */
-        .logo a:hover, .language a:hover {
-            text-decoration: underline; /* 悬浮后加下划线 */
-            color: hwb(225 0% 0%);
-        }
-
-        .body {
-            font-family: "Arial", "Helvetica", sans-serif; /*默认字体设置*/
-            margin-top: 180px;
-            text-align: center;
-            padding: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-    </style>
-
+    
+    <!--CSS样式-->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!--传统 Favicon.ico-->
+    <link rel="icon" href="../../assets/img/icon/favicon.ico" type="image/x-icon">
+    
+    <!--现代 PNG 图标-->
+    <link rel="icon" href="../../assets/img/icon/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../assets/img/icon/48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../assets/img/icon/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../assets/img/icon/512x512.png" type="image/png" sizes="512x512">
+    
+    <!--Apple Touch 图标-->
+    <link rel="apple-touch-icon" href="../../assets/img/icon/180x180.png" sizes="180x180">
 </head>
-<body>
+
+<body onload="window.scrollTo(0, 0);">
+    <!--导航栏-->
     <nav class="navbar">
-        <!-- Left: LOGO -->
-        <div class="logo">
-            <a href="index.html"><img src="../../assets/img/logo_top.png" alt="OZEN Logo"></a>
-            <a href="projects.html">PROJECT+</a>
-            <a href="me.html">ME.</a>
+        
+        <!--左上角-->
+        <div class="topleft">
+
+            <!--左上角Logo-->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../assets/img/logo_top.png" alt="OZEN Logo">
+                </a>
+            </div>
+
+            <!--左上角文字-->
+            <a href="projects.html"><span>PROJECT+</span></a>
+            <a href="me.html"><span>ME.</span></a>
+
         </div>
 
-        <!-- Right: Language -->
-        <div class="language">
-            <a href="index.html">EN</a>
-            <p>/</p>
-            <a href="chinese.html">中</a>
+        <!--右上角-->
+        <div class="topright">
+            <a href="../en/index.html"><span>EN</span></a>
+            <span>/</span>
+            <a href="../zh/index.html"><span>中</span></a>
         </div>
+
     </nav>
+
+    <!--以上为模板-->
+    <!--以下为内容-->
 
     <div class="body">
         <br><br><br><br><br><br> <br><br><br> <br><br><br> <br><br><br>
@@ -100,7 +60,6 @@
         <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <a href="#"><h1>Go Back↑</h1></a>
-        <br>
     </div>
 </body>
 </html>

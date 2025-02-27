@@ -5,87 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O OOO</title>
 
-    <style>
-        /* 重置默认样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-        .navbar {
-            display: flex;
-            justify-content: space-between; /* 左中右分布 */
-            align-items: center;
-            padding: 15px 35px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: black;
-        }
+    <!--传统 Favicon.ico-->
+    <link rel="icon" href="../../assets/img/icon/favicon.ico" type="image/x-icon">
 
-        .logo {
-            list-style: none;
-            display: flex;
-            gap: 50px; /* Logo 文字间距 */
-        }
+    <!--现代 PNG 图标-->
+    <link rel="icon" href="../../assets/img/icon/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../assets/img/icon/48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../assets/img/icon/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../assets/img/icon/512x512.png" type="image/png" sizes="512x512">
 
-        .logo img {
-            height: 100px;
-        }
-
-        .logo a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 70px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        .language {
-            list-style: none;
-            display: flex;
-            gap: 10px;
-        }
-
-        .language a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 20px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        /* 悬停效果 */
-        .logo a:hover, .language a:hover {
-            text-decoration: underline; /* 悬浮后加下划线 */
-            color: hwb(225 0% 0%);
-        }
-
-        .body {
-            margin-top: 180px;
-            text-align: center;
-            padding: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-    </style>
+    <!--Apple Touch 图标-->
+    <link rel="apple-touch-icon" href="../../assets/img/icon/180x180.png" sizes="180x180">
 
 </head>
 <body>
     <nav class="navbar">
         <!-- Left: LOGO -->
-        <div class="logo">
+        <div class="topleft">
             <a href="index.html"><img src="../../assets/img/logo_top.png" alt="OZEN Logo"></a>
             <a href="projects.html">PROJECT+</a>
             <a href="me.html">ME.</a>
         </div>
 
-        <!-- Right: Language -->
-        <div class="language">
+        <!-- Right: topright -->
+        <div class="topright">
             <a href="index.html">EN</a>
             <p>/</p>
             <a href="../zh/index.html">中</a>
