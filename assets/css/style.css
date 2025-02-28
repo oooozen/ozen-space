@@ -95,6 +95,7 @@ a {
     display: flex;
     align-items:baseline;
     gap: 0;
+    margin-bottom: 30px;
 }
 
 .topright a {
@@ -106,7 +107,7 @@ a {
 .topright a span {
     display: inline-block;
     position: relative;
-    padding:0 15px;
+    padding:0 20px;
     line-height: 1;
 }
 
@@ -116,10 +117,10 @@ a {
     z-index: -1;
 
     left: 0;
-    top: -80%;
+    top: 130%;
     width: 100%;
-    height: 180%;
-    transform: scaleY(calc(8/180));
+    height: 60%;
+    transform: scaleY(calc(15/60));
     transform-origin: top;
 
     background-color: black;
@@ -131,20 +132,21 @@ a {
     z-index: -1;
 
     left: 0;
-    top: -80%;
+    top: 130%;
     width: 100%;
-    height: 180%;
-    transform: scaleY(calc(45/180));
+    height: 60%;
+    transform: scaleY(calc(60/60));
     transform-origin: top;
 
     background-color: black;
 }
 
 .topright a span:hover::after{
-    transform: scaleY(calc(45/180));
+    transform: scaleY(calc(60/60));
     background-color: hwb(225 0% 0%);
     transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
+
 
 /*悬停*/
 .topleft a {
