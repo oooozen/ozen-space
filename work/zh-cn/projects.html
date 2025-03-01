@@ -8,17 +8,16 @@
     <!--CSS样式-->
     <link rel="stylesheet" href="../../assets/css/style.css">
     
-    <!--传统 Favicon.ico-->
-    <link rel="icon" href="../../assets/img/icon/favicon.ico" type="image/x-icon">
-    
-    <!--现代 PNG 图标-->
-    <link rel="icon" href="../../assets/img/icon/32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../../assets/img/icon/48x48.png" type="image/png" sizes="48x48">
-    <link rel="icon" href="../../assets/img/icon/192x192.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="../../assets/img/icon/512x512.png" type="image/png" sizes="512x512">
-    
-    <!--Apple Touch 图标-->
-    <link rel="apple-touch-icon" href="../../assets/img/icon/180x180.png" sizes="180x180">
+    <!--Icon图标-->
+    <link rel="icon" href="../../assets/img/icon/projects/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/icon/projects/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../assets/img/icon/projects/16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../assets/img/icon/projects/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../assets/img/icon/projects/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="../../assets/img/icon/projects/180x180.png" sizes="180x180">
+        
+     <!--加载程序-->
+     <script src="../../assets/js/language_switch.js"></script>
 </head>
 
 <body onload="window.scrollTo(0, 0);">
@@ -44,11 +43,11 @@
 
         <!--右上角-->
         <div class="topright">
-            <a href="../en/index.html"><span>EN</span></a>
+            <a href="#" onclick="switchlanguage('en'); return false;"><span>EN</span></a>
     
-            <a href="../zh-cn/index.html"><span data-type="selected">简</span></a>
+            <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span data-type="selected">简</span></a>
 
-            <a href="../zh-hant/index.html"><span>繁</span></a>
+            <a href="#" onclick="switchlanguage('zh-hant'); return false;"><span>繁</span></a>
         </div>
 
     </nav>
