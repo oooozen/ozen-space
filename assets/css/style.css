@@ -120,7 +120,7 @@ a {
     top: 130%;
     width: 100%;
     height: 60%;
-    transform: scaleY(calc(15/60));
+    transform: scaleY(calc(10/60));
     transform-origin: top;
 
     background-color: black;
@@ -144,7 +144,7 @@ a {
 .topright a span:hover::after{
     transform: scaleY(calc(60/60));
     background-color: hwb(225 0% 0%);
-    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 
@@ -156,29 +156,24 @@ a {
 
 .topleft a:not(.logo a):hover {
     color: hwb(225 0% 0%);
-    transform: rotate(5deg);
-    z-index: 1;
+    transform: rotate(4deg);
 }
 
 .topleft a:not(.logo a):after {
     content: "";
     position: absolute;
-    z-index: -1;
 
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 8%;
+    height: 7px;
 
     background-color: hwb(225 0% 0%);
-    opacity: 0.5;
     transform: scaleX(0);
     transform-origin: left;
 }
 
 .topleft a:not(.logo a):hover::after {
-    background-color: hwb(225 0% 0%);
-    opacity: 1;
     transform: scaleX(1);
 }
 
