@@ -7,15 +7,24 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     color: black;
 }
 
 body {
     text-align: center;
-
     padding: 250px 180px 50px 180px;
+}
 
-    background-color:;
+/* 页面加载时隐藏 */
+body {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* 页面加载后显示，防止 `hover` 失效 */
+body.show-content {
+    opacity: 1;
 }
 
 a {
@@ -162,7 +171,7 @@ a {
 .topleft a:not(.logo a):after {
     content: "";
     position: absolute;
-
+    
     left: 0;
     bottom: 0;
     width: 100%;
@@ -179,4 +188,44 @@ a {
 
 .topleft a, .topleft a:not(.logo a):hover::after {
     transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    padding: 100px 5%;
+    gap: 5%;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-left {
+    display: flex;
+    position: relative;
+    padding: 0 35px;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    text-align: left;
+    max-width: 200px;
+    font-size: 24px;
+}
+
+/* 图片网格 */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
 }

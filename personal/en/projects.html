@@ -3,104 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O OOO</title>
-
-    <style>
-        /* 重置默认样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between; /* 左中右分布 */
-            align-items: center;
-            padding: 15px 35px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: black;
-        }
-
-        .topleft {
-            list-style: none;
-            display: flex;
-            gap: 50px; /* Logo 文字间距 */
-        }
-
-        .topleft img {
-            height: 100px;
-        }
-
-        .topleft a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 70px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        .topright {
-            list-style: none;
-            display: flex;
-            gap: 10px;
-        }
-
-        .topright a {
-            text-decoration: none; /* 取消原来样式 */
-            color: black;
-            font-size: 20px;
-            transition: all 0.3s ease; /* 平滑效果 */
-        }
-
-        /* 悬停效果 */
-        .topleft a:hover, .topright a:hover {
-            text-decoration: underline; /* 悬浮后加下划线 */
-            color: hwb(225 0% 0%);
-        }
-
-        .body {
-            font-family: "Arial", "Helvetica", sans-serif; /*默认字体设置*/
-            margin-top: 180px;
-            text-align: center;
-            padding: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-    </style>
-
+    <title>OZEN .Projects</title>
+    
+    <!--CSS样式-->
+    <link rel="stylesheet" href="../../assets/css/style_1.css">
+    
+    <!--Icon图标-->
+    <link rel="icon" href="../../assets/img/icon/projects_work/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/icon/projects_work/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../assets/img/icon/projects_work/16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../assets/img/icon/projects_work/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../assets/img/icon/projects_work/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="../../assets/img/icon/projects_work/180x180.png" sizes="180x180">
+        
+     <!--加载程序-->
+     <script src="../../assets/js/language_switch.js"></script>
 </head>
+
 <body>
+    <!--导航栏-->
     <nav class="navbar">
-        <!-- Left: LOGO -->
+        
+        <!--左上角-->
         <div class="topleft">
-            <a href="index.html"><img src="../../assets/img/logo_top.png" alt="OZEN Logo"></a>
-            <a href="projects.html">PROJECT+</a>
-            <a href="me.html">ME.</a>
+
+            <!--左上角Logo-->
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo_default" src="../../assets/img/logo_top.png" alt="OZEN Logo">
+                    <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
+                </a>
+            </div>
+
+            <!--左上角文字-->
+            <a href="projects.html"><span>WORK+</span></a>
+            <a href="me.html"><span>SELF.</span></a>
+            <a href="me.html"><span>EXHIBIT.</span></a>
+
         </div>
 
-        <!-- Right: topright -->
+        <!--右上角-->
         <div class="topright">
-            <a href="index.html">EN</a>
-            <p>/</p>
-            <a href="../zh/index.html">中</a>
+            <a href="#" onclick="switchlanguage('en'); return false;"><span data-type="selected">EN</span></a>
+    
+            <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
+
+            <a href="#" onclick="switchlanguage('zh-hant'); return false;"><span>繁</span></a>
         </div>
+
     </nav>
 
+    <!--以上为模板-->
+    <!--以下为内容-->
+
     <div class="body">
-        <br><br><br><br><br><br> <br><br><br> <br><br><br> <br><br><br>
-        <h1>Under Construction</h1>
+
+        <a href="projects/changmen-slice.html">
+            <img src="../../assets/img/fullsize/projects/changmen-slice-01.jpg" alt="Look" width="550">
+        </a><br><br><br><br><br><br><br><br>
+
+        <h1 style="font-weight: normal;">&lt; Selected: 2019 - 2025 &gt;</h1><br><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <a href="projects/wetland-museum.html">
+            <h2 style="font-weight: normal;">Wetland Museum</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Museum</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>10/2022 - 12/2022&nbsp;&nbsp;Hangzhou, China
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <a href="projects/reincarnation-pagoda.html">
+            <h2 style="font-weight: normal;">Reincarnation Pagoda</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Factory</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Funerary</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>12/2022 - 04/2023&nbsp;&nbsp;Kailash, Tibet, China
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <a href="projects/70m+-office.html">
+            <h2 style="font-weight: normal;">70m+ Office</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Collaborative</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Office</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Parametric Design</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Generative Design</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>02/2023 - 06/2023&nbsp;&nbsp;Hongkong, China
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+        
+        <a href="projects/recreation-lab.html">
+            <h2 style="font-weight: normal;">Recreation Lab</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Amusement</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>09/2021 - 12/2021&nbsp;&nbsp;Hangzhou, China
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <a href="projects/changmen-slice.html">
+            <h2 style="font-weight: normal;">Changmen Slice</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Complex</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Megastructure</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Culture</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>02/2024 - 05/2024&nbsp;&nbsp;Suzhou, China
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <a href="projects/silicon-farm.html">
+            <h2 style="font-weight: normal;">Silicon Farm</h2>
+        </a><br>
+        <p>
+            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Europe</span>
+            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Research Center</span>
+             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+        <p><br>
+        <p>09/2024 - 01/2025&nbsp;&nbsp;Cambridge, UK
+        </p><br>
+
+        <hr style="width: 30%;margin: auto;"><br>
+
+        <br><h2>. . .</h2>
 
         <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <a href="#"><h1>Go Back↑</h1></a>
-        <br>
+        <a href="#"><h2><u>Above</u>↑</h2></a>
     </div>
 </body>
 </html>

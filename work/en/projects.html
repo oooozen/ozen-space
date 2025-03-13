@@ -6,27 +6,30 @@
     <title>OZEN .Projects</title>
     
     <!--CSS样式-->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style_1.css">
     
     <!--Icon图标-->
-    <link rel="icon" href="../../assets/img/icon/projects/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../../assets/img/icon/projects/32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../../assets/img/icon/projects/16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../assets/img/icon/projects/192x192.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="../../assets/img/icon/projects/512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="../../assets/img/icon/projects/180x180.png" sizes="180x180">
+    <link rel="icon" href="../../assets/img/icon/projects_work/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/icon/projects_work/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../assets/img/icon/projects_work/16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../assets/img/icon/projects_work/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../assets/img/icon/projects_work/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="../../assets/img/icon/projects_work/180x180.png" sizes="180x180">
         
      <!--加载程序-->
      <script src="../../assets/js/language_switch.js"></script>
+     <style>
+        
+    </style>
 </head>
 
-<body onload="window.scrollTo(0, 0);">
+<body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="index.html">
@@ -34,15 +37,24 @@
                     <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>PROJECT+</span></a>
-            <a href="me.html"><span>SELF.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="me.html"><span>SELF.</span></a>
+                <a href="projects.html"><span>WORK+</span></a>
+                <a href="projects.html">
+                    <svg width="70%" height="50%">
+                        <line x1="0" y1="0" x2="100%" y2="100%" stroke="black" stroke-width="0.5"/>
+                    </svg>
+                </a>
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span data-type="selected">EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
@@ -56,122 +68,159 @@
     <!--以下为内容-->
 
     <div class="body">
+        <!-- 左侧：文本 -->
+        <div class="body-left">
+            <div class="text-left">
+            DESIGN COMES FROM REALITY BUT GOES BEYOND REALITY
+            </div>
+        </div>
 
-        <a href="projects/changmen-slice.html">
-            <img src="../../assets/img/fullsize/projects/changmen-slice-01.jpg" alt="Look" width="550">
-        </a><br><br><br><br><br><br><br><br>
+        <!-- 中间 -->
+        <div class="body-mid">
+            <a href="projects/changmen-slice.html">
+                <img src="../../assets/img/fullsize/projects/changmen-slice-01.jpg" alt="Look" width="480">
+            </a><br><br><br><br><br><br><br><br>
 
-        <h1 style="font-weight: normal;">&lt; Selected: 2019 - 2025 &gt;</h1><br><br>
+            <h1 style="font-weight: normal;"></h1><br><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <div class="content">
+                <!-- 中间：建筑模型 -->
+                <div class="column">
+                    <div class="image-grid">
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/70m+office.png" alt="70m+office"><img class="hoverarea" src="../../assets/img/thumbnails/70m+office.png" alt="70m+office">
+                            <div class="overlay"><div class="text1">001 /<br><u>70M+<br>OFFICE</u></div><div class="text2">FEB / 2023 - JUN / 2023</div><div class="dot"></div></div></div>
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/wetland-museum.png" alt="wetland-museum"><img class="hoverarea" src="../../assets/img/thumbnails/wetland-museum.png" alt="wetland-museum">
+                            <div class="overlay"><div class="text1">002 /<br><u>WETLAND<br>MUSEUM</u></div><div class="text2">OCT / 2022 - DEC / 2022</div><div class="dot"></div></div></div>
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/silicon-farm.png" alt="silicon-farm"><img class="hoverarea" src="../../assets/img/thumbnails/silicon-farm.png" alt="silicon-farm">
+                            <div class="overlay"><div class="text1">003 /<br><u>SILICON<br>EROSION</u></div><div class="text2">SEP / 2024 - JAN / 2025</div><div class="dot"></div></div></div>
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/reincarnation-pagoda.png" alt="reincarnation-pagoda"><img class="hoverarea" src="../../assets/img/thumbnails/reincarnation-pagoda.png" alt="reincarnation-pagoda">
+                            <div class="overlay"><div class="text1">004 /<br><u>REINCARNATION<br>PAGODA</u></div><div class="text2">DEC / 2022 - APR / 2023</div><div class="dot"></div></div></div>
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/recreation-lab.png" alt="recreation-lab"><img class="hoverarea" src="../../assets/img/thumbnails/recreation-lab.png" alt="recreation-lab">
+                            <div class="overlay"><div class="text1">005 /<br><u>RECREATION<br>LAB</u></div><div class="text2">SEP / 2021 - DEC / 2021</div><div class="dot"></div></div></div>
+                        <div class="container"><img class="img" src="../../assets/img/thumbnails/changmen-slice.png" alt="changmen-slice"><img class="hoverarea" src="../../assets/img/thumbnails/changmen-slice.png" alt="changmen-slice">
+                            <div class="overlay"><div class="text1">006 /<br><u>CHANGMEN<br>SLICE</u></div><div class="text2">FEB / 2024 - MAY / 2024</div><div class="dot"></div></div></div>
+                    </div>
+                </div>   
+            </div> 
 
-        <a href="projects/wetland-museum.html">
-            <h2 style="font-weight: normal;">Wetland Museum</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Museum</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>10/2022 - 12/2022&nbsp;&nbsp;Hangzhou, China
-        </p><br>
+            <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 style="font-weight: normal;">&lt; Selected: 2019 - 2025 &gt;</h1><br><br>
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <a href="projects/wetland-museum.html">
+                <h2 style="font-weight: normal;">Wetland Museum</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Museum</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>10/2022 - 12/2022&nbsp;&nbsp;Hangzhou, China
+            </p><br>
 
-        <a href="projects/reincarnation-pagoda.html">
-            <h2 style="font-weight: normal;">Reincarnation Pagoda</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Factory</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Funerary</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>12/2022 - 04/2023&nbsp;&nbsp;Kailash, Tibet, China
-        </p><br>
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <a href="projects/reincarnation-pagoda.html">
+                <h2 style="font-weight: normal;">Reincarnation Pagoda</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Factory</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Funerary</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>12/2022 - 04/2023&nbsp;&nbsp;Kailash, Tibet, China
+            </p><br>
 
-        <a href="projects/70m+-office.html">
-            <h2 style="font-weight: normal;">70m+ Office</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Collaborative</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Office</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Parametric Design</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Generative Design</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>02/2023 - 06/2023&nbsp;&nbsp;Hongkong, China
-        </p><br>
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
-        
-        <a href="projects/recreation-lab.html">
-            <h2 style="font-weight: normal;">Recreation Lab</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Amusement</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>09/2021 - 12/2021&nbsp;&nbsp;Hangzhou, China
-        </p><br>
+            <a href="projects/70m+-office.html">
+                <h2 style="font-weight: normal;">70m+ Office</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Collaborative</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Office</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Parametric Design</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Generative Design</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>02/2023 - 06/2023&nbsp;&nbsp;Hongkong, China
+            </p><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <hr style="width: 30%;margin: auto;"><br>
+            
+            <a href="projects/recreation-lab.html">
+                <h2 style="font-weight: normal;">Recreation Lab</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Amusement</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>09/2021 - 12/2021&nbsp;&nbsp;Hangzhou, China
+            </p><br>
 
-        <a href="projects/changmen-slice.html">
-            <h2 style="font-weight: normal;">Changmen Slice</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Complex</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Megastructure</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Culture</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>02/2024 - 05/2024&nbsp;&nbsp;Suzhou, China
-        </p><br>
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <a href="projects/changmen-slice.html">
+                <h2 style="font-weight: normal;">Changmen Slice</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Complex</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Megastructure</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Culture</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>02/2024 - 05/2024&nbsp;&nbsp;Suzhou, China
+            </p><br>
 
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <a href="projects/silicon-farm.html">
-            <h2 style="font-weight: normal;">Silicon Farm</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Europe</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Research Center</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>09/2024 - 01/2025&nbsp;&nbsp;Cambridge, UK
-        </p><br>
+            <a href="projects/silicon-farm.html">
+                <h2 style="font-weight: normal;">Silicon Farm</h2>
+            </a><br>
+            <p>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Independent</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Europe</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Research Center</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            <p><br>
+            <p>09/2024 - 01/2025&nbsp;&nbsp;Cambridge, UK
+            </p><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <hr style="width: 30%;margin: auto;"><br>
 
-        <br><h2>. . .</h2>
+            <br><h2>. . .</h2>
 
-        <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <a href="#"><h2><u>Above</u>↑</h2></a>
+            <a href="#"><h2><u>Above</u>↑</h2></a>
+        </div>
+
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+            
+            </div>
+        </div>
     </div>
 </body>
 </html>

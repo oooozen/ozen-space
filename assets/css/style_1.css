@@ -1,0 +1,380 @@
+/*00.整体*/
+* {             /*重置默认样式*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hover-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hwb(225 0% 0%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -100;
+}
+
+/*01.顶部导航*/
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between; /* 左中右分布 */
+    align-items:center;
+    gap:50px;
+
+    top: 0;
+    left: 0;
+    padding: 0px 35px;
+
+    width: 100%;
+    height: 120px;  /*LAPTOP上看到的*/
+
+    z-index: 10;
+}
+
+.top-left, .top-right {
+    display: flex;
+    width: 220px;
+}
+
+.top-left {
+    position: relative;
+    align-items: center;
+    height: 64px; /*左上角框大小*/
+}
+
+.top-left .logo a {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+}
+
+.top-left .logo a img{
+    max-width: 100%;
+    height: auto;
+}
+
+.top-left .logo a .logo_default,
+.top-left .logo a .logo_hover {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.top-left .logo a .logo_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.top-left .logo a:hover .logo_hover,
+.top-left .logo a:hover .logo_default {
+    opacity: 1}
+
+.top-mid {
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex:1;
+}
+
+.top-mid .text-grid {
+    display: grid;
+    position: relative;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+    font-size: 80px;
+}
+
+.top-mid .text-grid a {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.top-mid .text-grid a svg {
+    display: flex;
+    position: relative;
+    place-self: center;
+
+    width: 70%;
+    height: 50%;
+}
+
+.top-mid .text-grid a span {
+    position: relative;
+    display: inline-block;
+}
+
+.top-mid .text-grid a span:hover {
+    color: hwb(225 0% 0%);
+    transform: rotate(4deg);
+}
+
+.top-mid .text-grid a span::after {
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+
+    background-color:hwb(225 0% 0%);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.top-mid .text-grid a span:hover::after {
+    transform: scaleX(1);
+}
+
+.top-mid .text-grid a span, .top-mid .text-grid a span:hover::after {
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s;
+}
+
+
+.top-right {
+    justify-content: flex-end;
+    align-items:baseline;
+    gap: 0;
+    margin-bottom: 28px;
+}
+
+.top-right a {
+    position: relative;
+    font-size: 16px; /*右上角文字大小*/
+    font-weight: 600;
+}
+
+.top-right a span {
+    display: inline-block;
+    position: relative;
+    padding:0 16px; /*右上角单个语言框大小*/
+    line-height: 1;
+}
+
+.top-right a span:not([data-type="selected"])::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    top: 130%;
+    width: 100%;
+    height: 60%;
+    transform: scaleY(calc(10/60));
+    transform-origin: top;
+
+    background-color: black;
+}
+
+.top-right a span[data-type="selected"]::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    top: 130%;
+    width: 100%;
+    height: 60%;
+    transform: scaleY(calc(60/60));
+    transform-origin: top;
+
+    background-color: black;
+}
+
+.top-right a span:hover::after{
+    transform: scaleY(calc(60/60));
+    background-color: hwb(225 0% 0%);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+
+/*02.BODY部分*/
+body {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+body.show-content {
+    opacity: 1;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    position: relative;
+    padding: 180px 35px 50px 35px;
+    height: 100vh;
+    gap:50px
+}
+
+/*BODY-侧边*/
+.body-left,.body-right {
+    display: flex;
+    position: relative;
+    width: 200px;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.body-right {
+    justify-content:flex-end;
+}
+
+.body-left .text-left {
+    position: fixed;
+    text-align: left;
+    width: inherit;
+    font-size: 36px;
+}
+
+.body-right .text-right {
+    position: fixed;
+    text-align: right;
+    width: inherit;
+    font-size: 36px;
+}
+
+/*BODY-中间*/
+.body-mid {
+    flex:1;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    gap: 5%;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.image-grid .container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grid .container .img,
+.image-grid .container .hoverarea {
+    max-width: 100%;
+    max-height: 70%;
+    cursor: pointer;
+    position: absolute;
+    object-fit: scale-down;
+    place-self: center;
+    z-index: 0;
+}
+
+.image-grid .container .hoverarea {
+    z-index: 2;
+    opacity: 0;
+}
+
+.image-grid .container .overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.image-grid .container .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: hwb(225 0% 0%);
+    border-radius: 50%;
+    place-self: center;
+}
+
+.image-grid .container .overlay .text1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: hwb(225 0% 0%);
+    font-size: 45px;
+    line-height: 1;
+    text-align: left;
+}
+
+.image-grid .container .overlay .text2 {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-90deg) translateX(100%);
+    transform-origin: bottom right;
+
+    color: hwb(225 0% 0%);
+    font-size: 22px;
+    line-height: 1;
+    text-align: left
+}
+
+.image-grid .container .hoverarea:hover ~ .overlay {
+    opacity: 1;
+}
