@@ -93,6 +93,21 @@
         <a href="#"><h2><u>Above</u>↑</h2></a>
 
     </div>
+ <script>
+    function getViewportSize() {
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    };
+}
 
+// 🚀 初次加载时显示可视区域大小
+console.log("当前浏览器可视区域:", getViewportSize());
+
+// 🚀 监听窗口缩放事件
+window.addEventListener("resize", function () {
+    console.log("窗口大小已更新:", getViewportSize());
+});
+ </script>
 </body>
 </html>

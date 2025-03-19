@@ -7,7 +7,7 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 0.9vw;
     color: black;
 }
 
@@ -38,27 +38,28 @@ body {
     position: fixed;
     justify-content: space-between; /* 左中右分布 */
     align-items:center;
-    gap:50px;
+    gap: 2.5vw;
 
     top: 0;
     left: 0;
-    padding: 0px 35px;
+    padding: 0px 2vw;
 
     width: 100%;
-    height: 120px;  /*LAPTOP上看到的*/
+    height: 14vh;  /*LAPTOP*/
 
     z-index: 10;
 }
 
 .top-left, .top-right {
     display: flex;
-    width: 220px;
+    width: 10.7vw;
 }
 
 .top-left {
+    display: flex;
     position: relative;
     align-items: center;
-    height: 64px; /*左上角框大小*/
+    height: 7vh; /*左上角框大小*/
 }
 
 .top-left .logo a {
@@ -69,15 +70,11 @@ body {
     height: 100%;
 }
 
-.top-left .logo a img{
-    max-width: 100%;
-    height: auto;
-}
-
+.top-left .logo a img,
 .top-left .logo a .logo_default,
 .top-left .logo a .logo_hover {
     display: block;
-    max-width: 100%;
+    max-width: 19vw;
     height: auto;
     transition: opacity 0.3s ease-in-out;
 }
@@ -114,7 +111,7 @@ body {
     width: 100%;
 
     text-align: center;
-    font-size: 80px;
+    font-size: 5vw;
 }
 
 .top-mid .text-grid a {
@@ -173,19 +170,19 @@ body {
     justify-content: flex-end;
     align-items:baseline;
     gap: 0;
-    margin-bottom: 28px;
+    margin-bottom: 2.5vh;
 }
 
 .top-right a {
     position: relative;
-    font-size: 16px; /*右上角文字大小*/
-    font-weight: 600;
+    font-size: 1rem; /*右上角文字大小*/
+    font-weight: bold;
 }
 
 .top-right a span {
     display: inline-block;
     position: relative;
-    padding:0 16px; /*右上角单个语言框大小*/
+    padding:0 1vw; /*右上角单个语言框大小*/
     line-height: 1;
 }
 
@@ -242,48 +239,163 @@ body.show-content {
     justify-content: space-between;
     align-items:flex-start;
     position: relative;
-    padding: 180px 35px 50px 35px;
+    padding: 18vh 2vw 50px 2vw;
     height: 100vh;
-    gap:50px
+    gap: 2.5vw;
 }
 
 /*BODY-侧边*/
 .body-left,.body-right {
     display: flex;
+    flex-direction: column; 
     position: relative;
-    width: 200px;
+    width: 10.7vw;
     justify-content:flex-start;
     align-items:flex-start;
+
+    text-align: left;
+    font-size: 2rem; 
 }
 
 .body-right {
     justify-content:flex-end;
 }
 
-.body-left .text-left {
+.body-left .nav-left {
+    display: flex;
     position: fixed;
+    flex-direction: column; 
+
     text-align: left;
     width: inherit;
-    font-size: 36px;
+    font-size: 2rem;
+}
+
+.body-left .nav-left .view-as {
+    display: flex;
+    flex-direction: column; 
+    position:absolute;
+    width: 100%;
+    line-height: 1.25;
+    transition: top 0.3s ease-in-out;
+    top: 30.7vw;
+}
+
+.body-left .nav-left .view-as a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.body-left .nav-left .view-as a:hover {
+    color: hwb(225 0% 0%);
+    text-decoration: underline;
+}
+
+.body-left .nav-left .view-as a.active {
+    text-decoration: underline; /* 选中时添加下划线 */
+    font-weight: bold; /* 让选中的项更突出 */
+}
+
+.body-left .nav-left .text-left {
+    display: flex;
+    position:absolute;
+    width: inherit;
+    font-size: 2rem;
 }
 
 .body-right .text-right {
-    position: fixed;
+    position: relative;
     text-align: right;
     width: inherit;
-    font-size: 36px;
+    font-size: 2rem;
 }
 
 /*BODY-中间*/
 .body-mid {
-    flex:1;
+    flex: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 5vh;
+
+    height: 82vh;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 82vh;
+    max-height: 82vh; /* 限制 `section` 高度，防止溢出 */
+    width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-align: start; /* 让 `section` 对齐滚动 */
+    margin-bottom: 18vh;
+    text-align: center;
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 39.44vw;
+    overflow: hidden; /* 避免滚动条出现 */
+}
+
+.showcase-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 平滑切换 */
+    max-width: 69.6vw;
+    scroll-behavior: smooth;
+}
+
+.showcase-container a {
+    flex: 0 0 100%; /* 确保每张图片占满 `showcase` */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 69.6vw;
+}
+
+.showcase-container a img {
+    max-height: 39.75vw;
+    max-width: 69.6vw;
+    object-fit: contain;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 1px;
+    padding: 1vh 1.2vh;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev-btn {
+    left: 90px;
+}
+
+.next-btn {
+    right: 90px;
 }
 
 .content {
     display: flex;
     flex: 1;
     gap: 5%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .column {
@@ -327,11 +439,11 @@ body.show-content {
 
 .image-grid .container .overlay {
     display: flex;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 87%;
+    height: 87%;
 
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -343,8 +455,8 @@ body.show-content {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     background-color: hwb(225 0% 0%);
     border-radius: 50%;
     place-self: center;
@@ -356,7 +468,7 @@ body.show-content {
     left: 0;
 
     color: hwb(225 0% 0%);
-    font-size: 45px;
+    font-size:2rem;
     line-height: 1;
     text-align: left;
 }
@@ -370,7 +482,8 @@ body.show-content {
     transform-origin: bottom right;
 
     color: hwb(225 0% 0%);
-    font-size: 22px;
+    font-size: 0.85rem;
+    font-weight: bold;
     line-height: 1;
     text-align: left
 }
