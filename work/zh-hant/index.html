@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OZEN .</title>
-    
+
     <!--CSS样式-->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style_work.css">
     
     <!--Icon图标-->
     <link rel="icon" href="../../assets/img/icon/index_work/favicon.ico" type="image/x-icon">
@@ -15,21 +15,27 @@
     <link rel="icon" href="../../assets/img/icon/index_work/192x192.png" type="image/png" sizes="192x192">
     <link rel="icon" href="../../assets/img/icon/index_work/512x512.png" type="image/png" sizes="512x512">
     <link rel="apple-touch-icon" href="../../assets/img/icon/index_work/180x180.png" sizes="180x180">
-        
+    
      <!--加载程序-->
-
+     <script src="../../assets/js/language_switch.js"></script>
+     <style>
+        body {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
+        }
+        a, button, .clickable {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
 </head>
 
-<!--以上为模板-->
-<!--以下为内容-->
-
 <body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="index.html">
@@ -37,52 +43,62 @@
                     <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>項目+</span></a>
-            <a href="me.html"><span>本人.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="me.html" style="font-size: 2rem;font-weight: lighter;"><span>個人.&nbsp;&nbsp;<</span></a>
+                <a href="index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+                <a href="projects.html" style="font-size: 2rem;font-weight: lighter;"><span>>&nbsp;&nbsp;項目+</span></a>
+
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span>EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
 
             <a href="#" onclick="switchlanguage('zh-hant'); return false;"><span data-type="selected">繁</span></a>
         </div>
-        
+
     </nav>
 
-    <div class="body">
+    <!--以上为模板-->
+    <!--以下为内容-->
 
-        <img src="../../assets/img/fullsize/logo_body.png" alt="Look" width="900">
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        
-        <h1>嗨，我是曾正午</h1>
-        <p>請下滑以了解更多</p>
-        <br>
-        <h2>↓</h2>
+        <div class="body">
+            <!-- 左侧：文本 -->
+            <div class="body-left">
+                <div class="nav-left">
+                    <div class="text-left">
 
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        
-        <a href="me.html">
-            <img src="../../assets/img/fullsize/myphoto_color.jpg" alt="Look" width="500">
-        </a>
+                    </div>
+                </div>
+            </div>
 
-        <br><br><br><br><br><br>
-        <p> 我來自浙江杭州， <br>目前是一名建築學學生<br><br>
-            我於<strong>浙江大學</strong> <br>取得建築學學士學位，<br>
-            <br>
-            目前正在荷蘭<br>
-            <strong>代爾夫特理工大學</strong><br>攻讀碩士學位。
-        </p>
+            <div class="body-mid">
+                <!--Showcase 视图-->
+                <section id="main">
+                        <a>
+                            <img src="../../assets/img/fullsize/logo_body.png" alt="Look" width="900">
+                        </a><br><br><br><br>
+                    <span style="font-size: 2rem;line-height:1.25 ;">嗨，我是<u>曾正午</u>。<br>目前正在<u>代爾夫特理工大學</u>攻讀<u>建築碩士學位</u><br>繼續發現我和我的作品</span>
+                </section>
+            </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br>
-
-        <a href="#"><h2><u>頂部</u>↑</h2></a>
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+            </div>
+        </div>
     </div>
-    <script src="../../assets/js/language_switch.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OZEN .</title>
-    
+
     <!--CSS样式-->
     <link rel="stylesheet" href="../../assets/css/style_personal.css">
     
@@ -20,23 +20,22 @@
      <script src="../../assets/js/language_switch.js"></script>
      <style>
         body {
-        opacity: 1; /* 页面默认隐藏，防止切换语言时闪烁 */
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
         }
-     </style>
-
-</script>
-    
+        a, button, .clickable {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
 </head>
 
-<!--以上为模板-->
-
 <body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="index.html">
@@ -44,22 +43,30 @@
                     <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>PROJECT+</span></a>
-            <a href="me.html"><span>SELF.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a style="font-size: 2rem;font-weight: lighter;"><span>SELF.&nbsp;&nbsp;<</span></a>
+                <a href="index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+                <a style="font-size: 2rem;font-weight: lighter;"><span>>&nbsp;&nbsp;WORK+</span></a>
+
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span data-type="selected">EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
 
             <a href="#" onclick="switchlanguage('zh-hant'); return false;"><span>繁</span></a>
-
-            <div class="underline"></div> <!-- 底部滑块 -->
         </div>
 
     </nav>
@@ -67,47 +74,37 @@
     <!--以上为模板-->
     <!--以下为内容-->
 
-    <div class="body">
+        <div class="body">
+            <!-- 左侧：文本 -->
+            <div class="body-left">
+                <div class="nav-left">
+                    <div class="text-left">
 
-        <br><br><br><br><br><br><br><br>
-        
-        <a href="me.html">
-            <img src="../../assets/img/fullsize/myphoto_child.jpg" alt="Look" width="500">
-        </a>
+                    </div>
+                </div>
+            </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="body-mid">
+                <!--Showcase 视图-->
+                <section id="main">
+                    <div class="showcase-container">
+                        <a>
+                            <img src="../../assets/img/fullsize/myphoto_child.jpg" alt="Look" width="600">
+                        </a>
+                    </div>
+                    <br><br><br><br>
+                    <span style="font-size: 2rem;line-height:1.25 ;">UNDER CONSTRUCTION.</span>
+                </section>
 
-        <h1>UNDER CONSTRUCTION.</h1>
-        <br>
-        <h2>↓</h2>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p> Hi, my Chinese name means "<strong>noon</strong>",<br>
-            as I was born at that time.<br><br>
-            The letter "O" resembles the midday sun,<br>
-            which is why you can call me <strong>Ozen</strong>.
-        </p>
+            <a href="#"><h2><u>Above</u>↑</h2></a>
+        </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br>
-
-        <a href="#"><h2><u>Above</u>↑</h2></a>
-
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+            </div>
+        </div>
     </div>
- <script>
-    function getViewportSize() {
-    return {
-        width: window.innerWidth,
-        height: window.innerHeight
-    };
-}
-
-// 🚀 初次加载时显示可视区域大小
-console.log("当前浏览器可视区域:", getViewportSize());
-
-// 🚀 监听窗口缩放事件
-window.addEventListener("resize", function () {
-    console.log("窗口大小已更新:", getViewportSize());
-});
- </script>
 </body>
 </html>

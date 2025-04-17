@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZEN .Self</title>
+    <title>OZEN .個人</title>
     
     <!--CSS样式-->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    
+    <link rel="stylesheet" href="../../assets/css/style_work.css">
+
     <!--Icon图标-->
     <link rel="icon" href="../../assets/img/icon/me_work/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../../assets/img/icon/me_work/32x32.png" type="image/png" sizes="32x32">
@@ -18,15 +18,23 @@
         
      <!--加载程序-->
      <script src="../../assets/js/language_switch.js"></script>
+     <style>
+        body {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+        }
+        a, button, .clickable {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="index.html">
@@ -34,15 +42,24 @@
                     <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>項目+</span></a>
-            <a href="me.html"><span>本人.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="projects.html" style="font-size: 2rem;font-weight: lighter;"><span>項目+&nbsp;&nbsp;<</span></a>
+                <a href="me.html"><span>個人.</span></a>
+                <a href="index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span>EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
@@ -56,95 +73,258 @@
     <!--以下为内容-->
 
     <div class="body">
-        <img src="../../assets/img/fullsize/myphoto_color.jpg" alt="Look" width="500">
-        <br><br><br><br><br><br>
+        <div class="body-left">
+            <div class="nav-left">
+                <div class="text-left">
+                    从專業<br>到職業
+                </div>
+                <div class="view-as">
+                    <a href="#ownphoto">照片 /</a>
+                    <a href="#jobobjective">目標 /</a>
+                    <a href="#experience">經歷 /</a>
+                    <a href="#skill">技能 /</a>
+                    <a href="#contact">聯絡 /</a>
+                </div>
+            </div>
+        </div>
 
-        <h1><u>教育經歷</u>.</h1><br><br><br>
-        <h4>2019.09 - 2024.06</h4><br>
-        <p>
-            中國 · 浙江大學<br>
-            <u>建築學學士</u>（五年制）, GPA 86/100
-        <p><br><br>
-        <h4>2023.07</h4><br>
-        <p>
-            義大利 · 米蘭理工大學<br>
-            <u>訪問學生</u>（城市規劃工作坊）
-        <p><br><br>
-        <h4>2024.09 - 2026.06</h4><br>
-        <p>
-            荷蘭 · 代爾夫特理工大學<br>
-            <u>建築學理學碩士</u>（建築、城市主義與建築科學）
-        <p><br><br><br><br><br>
-    
-        <h1><u>工作經歷</u>.</h1><br><br><br>
-        <h4>2022.09-2022.12</h4><br>
-        <p>
-            杭州 · Line+建築設計事務所<br>
-            <u>建築實習生</u><br><br>
-            立面研究 / 設計深化 / 文本製作<br>
-            繪圖（分析圖，平剖面）/ 立面、體量建模<br>
-        <p><br><br><br><br><br>
-    
-        <h1><u>語言</u>.</h1><br><br>
-        <h4>中文</h4><br>
-        <p>
-            母語使用者
-        </p><br>
-        <h4>英語</h4><br>
-        <p>
-            熟練掌握，雅思 7.5
-        </p><br><br><br><br><br>
-    
-        <h1><u>軟體</u>.</h1><br><br>
-        <h4>文檔</h4><br>
-        <p>
-            Word / Powerpoint / Excel / Notion
-        </p><br>
-        <h4>繪圖</h4><br>
-        <p>
-            AutoCAD / ArcGIS<br>
-            Photoshop / Illustrator / InDesign</p><br>
-        <h4>建模</h4><br>
-        <p>
-            Rhino (+Grasshopper) / Revit / SketchUp
-        </p><br>
-        <h4>渲染</h4><br>
-        <p>
-            Enscape / V-ray / D5
-        </p><br>
-        <h4>視頻</h4><br>
-        <p>
-            Premiere / After Effects
-        </p><br>
-        <h4>編程</h4><br>
-        <p>
-            Python / HTML
-        </p><br><br><br><br><br>
-    
-        <h1><u>聯絡</u>.</h1><br><br>
-        <h4>郵箱</h4><br>
-        <p>
-            Z.Zeng-11@student.tudelft.nl<br>
-            zengzhengwu2001@outlook.com</p><br><br>
-        <h4>手機</h4><br>
-        <p>
-            +31-616575329<br>
-            +86-13325911162</p><br><br>
-        <h4>地址</h4><br>
-        <p>
-            荷蘭 · 代爾夫特，2628PZ<br>
-            中國 · 杭州，310012</p><br><br>
-        <h4>微信 (button)</h4><br>
-        <p>
-            z1719271701
-        </p><br><br>
-        <h4>網站 (button)</h4><br>
-        <p>
-            https://oooozen.github.io/ozen-space/work/en/index.html
-        </p><br><br><br><br><br>
-    
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 中间 -->
+        <div class="body-mid">
+            <!--Showcase 视图-->
+            <section id="ownphoto">
+                <div class="showcase-container">
+                    <a><img src="../../assets/img/fullsize/myphoto_color.jpg" alt="Ozen"></a>
+                </div>
+            </section>
+
+            <section id="jobobjective">
+                <h1><u>目标</u>.</h1><br><br><br>
+                <h4>建筑设计实习生</h4><br>
+                <p>2025.07 - 2025.09</p>
+            </section>
+
+            <section id="experience">
+                <h1><u>教育經歷</u>.</h1><br><br><br>
+                <h4>2019.09 - 2024.06</h4><br>
+                <p>
+                    中國 · 浙江大學<br>
+                    <u>建築學學士</u>（五年制）, GPA 86/100
+                <p><br><br>
+
+                <h4>2023.07</h4><br>
+                <p>
+                    義大利 · 米蘭理工大學<br>
+                    <u>訪問學生</u>（城市規劃工作坊）
+                <p><br><br>
+
+                <h4>2024.09 - 2026.06</h4><br>
+                <p>
+                    荷蘭 · 代爾夫特理工大學<br>
+                    <u>建築學理學碩士</u>（建築、城市主義與建築科學）
+                <p><br><br><br><br><br>
+        
+                <h1><u>工作經歷</u>.</h1><br><br><br>
+                <h4>2022.09-2022.12</h4><br>
+                <p>
+                    杭州 · Line+建築設計事務所<br>
+                    <u>建築實習生</u><br><br>
+                    立面研究 / 設計深化 / 文本製作<br>
+                    繪圖（分析圖，平剖面）/ 立面、體量建模<br>
+                <p>
+            </section>
+
+            <section id="skill">
+                <h1><u>語言</u>.</h1><br><br>
+                <h4>中文</h4><br>
+                <p>
+                    母語使用者
+                </p><br>
+                <h4>英語</h4><br>
+                <p>
+                    熟練掌握，雅思 7.5
+                </p><br><br><br>
+        
+                <h1><u>軟體</u>.</h1><br><br>
+        
+                <h4>文檔</h4><br>
+                <p>
+                    Word / Powerpoint / Excel / Notion
+                </p><br>
+                
+                <h4>繪圖</h4><br>
+                <p>
+                    AutoCAD / ArcGIS<br>
+                    Photoshop / Illustrator / InDesign</p><br>
+                
+                <h4>建模</h4><br>
+                <p>
+                    Rhino (+Grasshopper) / Revit / SketchUp
+                </p><br>
+        
+                <h4>渲染</h4><br>
+                <p>
+                    Enscape / V-ray / D5
+                </p><br>
+        
+                <h4>視頻</h4><br>
+                <p>
+                    Premiere / After Effects
+                </p><br>
+        
+                <h4>編程</h4><br>
+                <p>
+                    Python / HTML
+                </p>
+            </section>
+
+            <section id="contact">
+                <h1><u>聯絡</u>.</h1><br><br>
+                <h4>郵箱</h4><br>
+                <p>
+                    Z.Zeng-11@student.tudelft.nl<br>
+                    zengzhengwu2001@outlook.com</p><br><br>
+                
+                <h4>手機</h4><br>
+                <p>
+                    +31-616575329<br>
+                    +86-13325911162</p><br><br>
+                
+                <h4>地址</h4><br>
+                <p>
+                    荷蘭 · 代爾夫特，2628PZ<br>
+                    中國 · 杭州，310012</p>
+
+                <div class="medialink">
+                    <a href="https://www.linkedin.com/in/正午-曾-2aba35301">
+                        <img src="../../assets/img/thumbnails/linkedin.svg"></img>
+                    </a>
+                    <a href="https://www.instagram.com/oooozen?igsh=N3F6aDdqM2hpNXdo&utm_source=qr">
+                        <img src="../../assets/img/thumbnails/instagram.svg"></img>
+                    </a>
+                    <a href="">
+                        <img src="../../assets/img/thumbnails/wechat.svg"></img>
+                    </a>
+                    <a href="https://www.xiaohongshu.com/user/profile/5d1e0d620000000012035fb9?xsec_token=YBFzshxYji5Anil9D6pUdqGfTmqEPjH7MQOodB_-FJA7g=&xsec_source=app_share&xhsshare=CopyLink&appuid=5d1e0d620000000012035fb9&apptime=1742381256&share_id=1da744b7e4e64394b807b6742c955baa">
+                        <img src="../../assets/img/thumbnails/xiaohongshu.svg"></img>
+                    </a>
+                </div>
+            </section>
+
         <a href="#"><h2><u>頂部</u>↑</h2></a>
     </div>
+
+    <!-- 右侧：文本 -->
+    <div class="body-right">
+        <div class="text-right">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateActiveLink(); // 🚀 页面加载后初始化下划线
+            updateNavLeftPosition(); // 🚀 初始化 `nav-left` 位置
+        });
+
+        // 🚀 **监听滚动，动态更新下划线**
+        window.addEventListener("scroll", updateActiveLink);
+
+        // 🚀 **监听窗口变化，更新 `nav-left` 位置**
+        window.addEventListener("resize", updateNavLeftPosition);
+
+        // 🚀 **监听导航栏点击，跳转到 `section` 并更新下划线**
+        document.querySelectorAll(".view-as a").forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (!targetSection) return;
+
+                let offset = window.innerHeight * 0.18; // ✅ 18vh 转换为像素
+                if (targetId === "grid") {
+                    const bodyMidWidth = document.querySelector(".body-mid")?.clientWidth || window.innerWidth;
+                    offset = (window.innerHeight * 0.18) - (bodyMidWidth * 0.3 / 6); // ✅ 计算 Grid 偏移量
+                }
+
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+
+                setTimeout(updateActiveLink, 1000);
+            });
+        });
+
+        // 🚀 **计算可见高度最大的 section，并更新 `active` 下划线**
+        function updateActiveLink() {
+            let maxVisibleHeight = 0;
+            let lockedSection = null;
+            
+            document.querySelectorAll("section").forEach(section => {
+                let rect = section.getBoundingClientRect();
+                let visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+                if (visibleHeight > maxVisibleHeight) {
+                    maxVisibleHeight = visibleHeight;
+                    lockedSection = section;
+                }
+            });
+
+            if (lockedSection) {
+                document.querySelectorAll(".view-as a").forEach(link => {
+                    link.classList.toggle("active", link.getAttribute("href").substring(1) === lockedSection.id);
+                });
+            }
+        }
+
+        // 🚀 **计算 nav-left 的 `top` 位置**
+        function updateNavLeftPosition() {
+        }
+        
+        // 🚀 **页面加载 & 监听窗口变化**
+        document.addEventListener("DOMContentLoaded", updateNavLeftPosition);
+        window.addEventListener("resize", updateNavLeftPosition);
+
+        
+        // 🚀 **监听滚动，确保 `section` 先滚动，滚完后才滚 `body`**
+        document.addEventListener("wheel", function (event) {
+            let currentSection = null;
+            document.querySelectorAll("section").forEach(section => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top <= 10 && rect.bottom >= window.innerHeight - (window.innerHeight * 0.18)) {
+                    currentSection = section;
+                }
+            });
+
+            if (!currentSection) return;
+
+            let atTop = currentSection.scrollTop === 0;
+            let atBottom = currentSection.scrollHeight - currentSection.scrollTop === currentSection.clientHeight;
+
+            if ((event.deltaY > 0 && atBottom) || (event.deltaY < 0 && atTop)) {
+                let nextSection = event.deltaY > 0 ? currentSection.nextElementSibling : currentSection.previousElementSibling;
+
+                if (nextSection) {
+                    let offset = window.innerHeight * 0.18;
+                    if (nextSection.id === "grid") {
+                        const bodyMidWidth = document.querySelector(".body-mid")?.clientWidth || window.innerWidth;
+                        offset = (window.innerHeight * 0.18) - (bodyMidWidth * 0.3 / 6);
+                    }
+
+                    let targetPosition = nextSection.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+
+                    setTimeout(updateActiveLink, 1000);
+                }
+            } else {
+                // 🚀 允许 `section` 内部滚动，不阻止默认滚动行为
+                if (!atTop && !atBottom) return;
+                document.body.style.overflowY = "hidden";
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>

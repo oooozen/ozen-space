@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZEN .項目</title>
+    
+    <!--CSS样式-->
+    <link rel="stylesheet" href="../../../assets/css/style_work.css">
+    
+    <!--Icon图标-->
+    <link rel="icon" href="../../../assets/img/icon/projects_work/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../assets/img/icon/projects_work/32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../assets/img/icon/projects_work/16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../../assets/img/icon/projects_work/192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../../../assets/img/icon/projects_work/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="../../../assets/img/icon/projects_work/180x180.png" sizes="180x180">
+        
+     <!--加载程序-->
+     <script src="../../../assets/js/language_switch.js"></script>
+     <style>
+        body {
+            cursor: url('../../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
+        }
+        a, button, .clickable {
+            cursor: url('../../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hover-bg"></div>
+    <!--导航栏-->
+    <nav class="navbar">
+
+        <!--左上角-->
+        <div class="top-left">
+            <!--左上角Logo-->
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo_default" src="../../../assets/img/logo_top.png" alt="OZEN Logo">
+                    <img class="logo_hover" src="../../../assets/img/logo_top_hover.png" alt="OZEN Logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+                <a href="../projects.html"><span>項目+</span></a>
+                <a href="../me.html" style="font-size: 2rem;font-weight: lighter;"><span>>&nbsp;&nbsp;個人.</span></a>
+            </div>
+            <!--背景切换-->
+        </div>
+        
+        <!--右上角-->
+        <div class="top-right">
+            <a href="#" onclick="switchlanguage('en'); return false;"><span>EN</span></a>
+    
+            <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
+
+            <a href="#" onclick="switchlanguage('zh-hant'); return false;"><span data-type="selected">繁</span></a>
+        </div>
+
+    </nav>
+
+    <!--以上为模板-->
+    <!--以下为内容-->
+
+    <div class="body">
+        <!-- 左侧：文本 -->
+        <div class="body-left">
+        </div>
+
+        <!-- 中间 -->
+        <div class="body-mid">
+            <section id="showcase">
+                <button class="prev-btn">←</button> <!-- 左切换按钮 -->
+                <div class="showcase-container" id="showcase-container">
+                    <a><img src="../../../assets/img/fullsize/projects/oasis-plan-01.jpg" alt="Look"></a>
+                    <a><img src="../../../assets/img/fullsize/projects/oasis-plan-02.jpg" alt="Look"></a>
+                </div>
+                <button class="next-btn">→</button> <!-- 右切换按钮 -->
+        </section>
+        </div>
+
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+                綠洲計劃<br><br>
+                2022.03 - 2022.04<br>
+                新疆 · 喀什<br><br>
+                <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建築</span><br>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">課設</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">合作</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亞洲</span>
+                <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">住宅</span>
+                <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            </div>
+        </div>
+        
+</body>
+<script> 
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("showcase-container");
+        const images = container.querySelectorAll("a");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        let index = 0;
+        let lock = false;
+
+        const slide = (i) => {
+            if (lock) return;
+            lock = true;
+            if (i < 0) i = images.length - 1; // 首尾连接
+            if (i >= images.length) i = 0;    // 首尾连接
+            const offset = i * container.clientWidth;
+            container.style.transform = `translateX(-${offset}px)`;
+            index = i;
+            setTimeout(() => lock = false, 500);
+        };
+
+        prevBtn.addEventListener("click", () => {
+            slide(index - 1);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            slide(index + 1);
+        });
+
+        container.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                slide(index + 1);
+            } else {
+                slide(index - 1);
+            }
+        });
+    });
+</script>
+</html>

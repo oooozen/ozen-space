@@ -6,7 +6,7 @@
     <title>OZEN .Projects</title>
     
     <!--CSS样式-->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style_work.css">
     
     <!--Icon图标-->
     <link rel="icon" href="../../../assets/img/icon/projects_work/favicon.ico" type="image/x-icon">
@@ -18,15 +18,24 @@
         
      <!--加载程序-->
      <script src="../../../assets/js/language_switch.js"></script>
+     <style>
+        body {
+            cursor: url('../../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
+        }
+        a, button, .clickable {
+            cursor: url('../../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="../index.html">
@@ -34,15 +43,24 @@
                     <img class="logo_hover" src="../../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>WORK+</span></a>
-            <a href="me.html"><span>SELF.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="../index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+                <a href="../projects.html"><span>WORK+</span></a>
+                <a href="../me.html" style="font-size: 2rem;font-weight: lighter;"><span>>&nbsp;&nbsp;SELF.</span></a>
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span data-type="selected">EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span>简</span></a>
@@ -56,30 +74,73 @@
     <!--以下为内容-->
 
     <div class="body">
-        <img src="../../../assets/img/fullsize/projects/oasis-plan-01.jpg" alt="Look" width="1200">
-        <br><br><br><br><br><br><br><br>
-        <img src="../../../assets/img/fullsize/projects/oasis-plan-02.jpg" alt="Look" width="1200">
-        
+        <!-- 左侧：文本 -->
+        <div class="body-left">
+        </div>
 
-        <hr style="width: 30%;margin: auto;"><br>
+        <!-- 中间 -->
+        <div class="body-mid">
+            <section id="showcase">
+                <button class="prev-btn">←</button> <!-- 左切换按钮 -->
+                <div class="showcase-container" id="showcase-container">
+                    <a><img src="../../../assets/img/fullsize/projects/oasis-plan-01.jpg" alt="Look"></a>
+                    <a><img src="../../../assets/img/fullsize/projects/oasis-plan-02.jpg" alt="Look"></a>
+                </div>
+                <button class="next-btn">→</button> <!-- 右切换按钮 -->
+        </section>
+        </div>
 
-        <h3 style="font-weight: normal;">Oasis Plan</h3><br>
-        
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">Architecture</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Academic</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Collaborative</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Asia</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">Housing</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>03/2022 - 04/2022&nbsp;&nbsp;Keshi, China
-        </p><br>
-
-        <hr style="width: 30%;margin: auto;"><br>
-
-        <br><br><br><br><br><br><br><br><br><br>
-        <a href="#"><h2><u>Above</u>↑</h2></a>
-    </div>
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+                    Oasis<br>Plan<br><br>
+                    03/2022 - 04/2022<br>
+                    Keshi, China<br><br>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">Architecture</span><br>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">Academic</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">Collaborative</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">Asia</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">Housing</span>
+                    <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+            </div>
+        </div>
 </body>
+<script> 
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("showcase-container");
+        const images = container.querySelectorAll("a");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        let index = 0;
+        let lock = false;
+
+        const slide = (i) => {
+            if (lock) return;
+            lock = true;
+            if (i < 0) i = images.length - 1; // 首尾连接
+            if (i >= images.length) i = 0;    // 首尾连接
+            const offset = i * container.clientWidth;
+            container.style.transform = `translateX(-${offset}px)`;
+            index = i;
+            setTimeout(() => lock = false, 500);
+        };
+
+        prevBtn.addEventListener("click", () => {
+            slide(index - 1);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            slide(index + 1);
+        });
+
+        container.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                slide(index + 1);
+            } else {
+                slide(index - 1);
+            }
+        });
+    });
+</script>
 </html>

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZEN .Projects</title>
+    <title>OZEN .项目</title>
     
     <!--CSS样式-->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style_work.css">
     
     <!--Icon图标-->
     <link rel="icon" href="../../assets/img/icon/projects_work/favicon.ico" type="image/x-icon">
@@ -18,15 +18,24 @@
         
      <!--加载程序-->
      <script src="../../assets/js/language_switch.js"></script>
+     <style>
+        body {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
+        }
+        a, button, .clickable {
+            cursor: url('../../assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="hover-bg"></div>
     <!--导航栏-->
     <nav class="navbar">
-        
-        <!--左上角-->
-        <div class="topleft">
 
+        <!--左上角-->
+        <div class="top-left">
             <!--左上角Logo-->
             <div class="logo">
                 <a href="index.html">
@@ -34,15 +43,24 @@
                     <img class="logo_hover" src="../../assets/img/logo_top_hover.png" alt="OZEN Logo">
                 </a>
             </div>
-
-            <!--左上角文字-->
-            <a href="projects.html"><span>项目+</span></a>
-            <a href="me.html"><span>本人.</span></a>
-
         </div>
 
+        <div class="top-mid">
+            <div class="text-grid">
+                <!--左上角文字-->
+                <a href="index.html">
+                    <svg width="100%" height="50%">
+                        <line x1="26%" y1="50%" x2="74%" y2="50%" stroke="black" stroke-width="0.8"/>
+                    </svg>
+                </a>
+                <a href="projects.html"><span>项目+</span></a>
+                <a href="me.html" style="font-size: 2rem;font-weight: lighter;"><span>>&nbsp;&nbsp;本人.</span></a>
+            </div>
+            <!--背景切换-->
+        </div>
+        
         <!--右上角-->
-        <div class="topright">
+        <div class="top-right">
             <a href="#" onclick="switchlanguage('en'); return false;"><span>EN</span></a>
     
             <a href="#" onclick="switchlanguage('zh-cn'); return false;"><span data-type="selected">简</span></a>
@@ -56,122 +74,381 @@
     <!--以下为内容-->
 
     <div class="body">
+        <!-- 左侧：文本 -->
+        <div class="body-left">
+            <div class="nav-left">
+                <div class="text-left">
+                    源于真实<br>但是<br>超越现实
+                </div>
 
-        <a href="projects/changmen-slice.html">
-            <img src="../../assets/img/fullsize/projects/changmen-slice-01.jpg" alt="Look" width="550">
-        </a><br><br><br><br><br><br><br><br>
+                <div class="view-as">
+                    <a href="#showcase">展示 /</a>
+                    <a href="#grid">图片 /</a>
+                    <a href="#list">列表 /</a>
+                </div>
 
-        <h1 style="font-weight: normal;">&lt; 集：2019 - 2025 &gt;</h1><br><br>
+            </div>
+        </div>
 
-        <hr style="width: 30%;margin: auto;"><br>
+        <!-- 中间 -->
+        <div class="body-mid">
+            <!--Showcase 视图-->
+            <section id="showcase">
+                    <button class="prev-btn">←</button> <!-- 左切换按钮 -->
+                    <div class="showcase-container">
+                        <a href="projects/changmen-slice.html">
+                            <img src="../../assets/img/fullsize/projects/changmen-slice-01.jpg" alt="Changmen Slice">
+                        </a>
+                        <a href="projects/wetland-museum.html">
+                            <img src="../../assets/img/fullsize/projects/wetland-museum-01.jpg" alt="Wetland Museum">
+                        </a>
+                        <a href="projects/reincarnation-pagoda.html">
+                            <img src="../../assets/img/fullsize/projects/reincarnation-pagoda-01.jpg" alt="Reincarnation Pagoda">
+                        </a>
+                        <a href="projects/70m+-office.html">
+                            <img src="../../assets/img/fullsize/projects/70m+office-01.jpg" alt="70m+ Office">
+                        </a>
+                        <a href="projects/recreation-lab.html">
+                            <img src="../../assets/img/fullsize/projects/recreation-lab-01.jpg" alt="Recreation Lab">
+                        </a>
+                    </div>
+                    <button class="next-btn">→</button> <!-- 右切换按钮 -->
+            </section>
 
-        <a href="projects/wetland-museum.html">
-            <h2 style="font-weight: normal;">斯卡帕馆</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">工作坊</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">个人</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">亚洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">博物馆</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2022.10 - 2022.12&nbsp;&nbsp;浙江 · 杭州
-        </p><br>
+            <!--Grid 视图-->
+            <section id="grid" class="content">
+                <div class="column">
+                    <div class="image-grid">
+                        <a href="projects/wetland-museum.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/wetland-museum.png" alt="wetland-museum"><img class="hoverarea" src="../../assets/img/thumbnails/wetland-museum.png" alt="wetland-museum">
+                                <div class="overlay"><div class="text1">001 /<br><u>斯卡帕馆</u></div><div class="text2">OCT / 2022 - DEC / 2022</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/reincarnation-pagoda.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/reincarnation-pagoda.png" alt="reincarnation-pagoda"><img class="hoverarea" src="../../assets/img/thumbnails/reincarnation-pagoda.png" alt="reincarnation-pagoda">
+                                <div class="overlay"><div class="text1">002 /<br><u>轮回塔</u></div><div class="text2">DEC / 2022 - APR / 2023</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/70m+-office.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/70m+office.png" alt="70m+office"><img class="hoverarea" src="../../assets/img/thumbnails/70m+office.png" alt="70m+office">
+                                <div class="overlay"><div class="text1">003 /<br><u>七十米办事处</u></div><div class="text2">FEB / 2023 - JUN / 2023</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/recreation-lab.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/recreation-lab.png" alt="recreation-lab"><img class="hoverarea" src="../../assets/img/thumbnails/recreation-lab.png" alt="recreation-lab">
+                                <div class="overlay"><div class="text1">004 /<br><u>实验乐园</u></div><div class="text2">SEP / 2021 - DEC / 2021</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/changmen-slice.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/changmen-slice.png" alt="changmen-slice"><img class="hoverarea" src="../../assets/img/thumbnails/changmen-slice.png" alt="changmen-slice">
+                                <div class="overlay"><div class="text1">005 /<br><u>阊门切片</u></div><div class="text2">FEB / 2024 - MAY / 2024</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/silicon-farm.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/silicon-farm.png" alt="silicon-farm"><img class="hoverarea" src="../../assets/img/thumbnails/silicon-farm.png" alt="silicon-farm">
+                                <div class="overlay"><div class="text1">006 /<br><u>硅场</u></div><div class="text2">SEP / 2024 - JAN / 2025</div><div class="dot"></div></div></div>
+                        </a>
+                        <a href="projects/oasis-plan.html">
+                            <div class="container"><img class="img" src="../../assets/img/thumbnails/oasis-plan.png" alt="oasis-plan"><img class="hoverarea" src="../../assets/img/thumbnails/oasis-plan.png" alt="oasis-plan">
+                                <div class="overlay"><div class="text1">007 /<br><u>绿洲计划</u></div><div class="text2">MAR / 2022 - APR / 2022</div><div class="dot"></div></div></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        <hr style="width: 30%;margin: auto;"><br>
+            <!--List 视图-->
+            <section id="list">
+                <hr style="width: 66.6%;margin: auto;height: 2px;background-color: black; border: none;"><br>
 
-        <a href="projects/reincarnation-pagoda.html">
-            <h2 style="font-weight: normal;">轮回塔</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">工作坊</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">个人</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">亚洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">工厂</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">丧葬</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2022.12 - 2023.04&nbsp;&nbsp;西藏 · 冈仁波齐
-        </p><br>
+                <a href="projects/wetland-museum.html">
+                    <h2 style="font-weight: normal;">斯卡帕馆</h2>
+                </a><br>
+                <p>2022.10 - 2022.12&nbsp;&nbsp;浙江 · 杭州
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">工作坊</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">个人</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">博物馆</span>
+                     <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+                <hr style="width: 66.6%;margin: auto;"><br>
 
-        <a href="projects/70m+-office.html">
-            <h2 style="font-weight: normal;">七十米办事处</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">课设</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">合作</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">亚洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">办公</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">参数化</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">生成式设计</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2023.02 - 2023.06&nbsp;&nbsp;中国 · 香港
-        </p><br>
+                <a href="projects/reincarnation-pagoda.html">
+                    <h2 style="font-weight: normal;">轮回塔</h2>
+                </a><br>
+                <p>2022.12 - 2023.04&nbsp;&nbsp;西藏 · 冈仁波齐
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">工作坊</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">个人</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">工厂</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">丧葬</span>
+                     <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
-        
-        <a href="projects/recreation-lab.html">
-            <h2 style="font-weight: normal;">实验乐园</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">课设</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">个人</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">亚洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">游乐</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2021.09 - 2021.12&nbsp;&nbsp;浙江 · 杭州
-        </p><br>
+                <hr style="width: 66.6%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+                <a href="projects/70m+-office.html">
+                    <h2 style="font-weight: normal;">七十米办事处</h2>
+                </a><br>
+                <p>2023.02 - 2023.06&nbsp;&nbsp;中国 · 香港
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">课设</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">合作</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">办公</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">参数化</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">生成式设计</span>
+                     <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <a href="projects/changmen-slice.html">
-            <h2 style="font-weight: normal;">阊门切片</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">毕设</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">个人</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">亚洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">综合体</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">巨构</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">文化</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2024.02 - 2024.05&nbsp;&nbsp;江苏 · 苏州
-        </p><br>
+                <hr style="width: 66.6%;margin: auto;"><br>
+                
+                <a href="projects/recreation-lab.html">
+                    <h2 style="font-weight: normal;">实验乐园</h2>
+                </a><br>
+                <p>2021.09 - 2021.12&nbsp;&nbsp;浙江 · 杭州
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">课设</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">个人</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">游乐</span>
+                     <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+                <hr style="width: 66.6%;margin: auto;"><br>
 
+                <a href="projects/changmen-slice.html">
+                    <h2 style="font-weight: normal;">阊门切片</h2>
+                </a><br>
+                <p>2024.02 - 2024.05&nbsp;&nbsp;江苏 · 苏州
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">毕设</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">个人</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">综合体</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">巨构</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">文化</span>
+                     <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <a href="projects/silicon-farm.html">
-            <h2 style="font-weight: normal;">硅场</h2>
-        </a><br>
-        <p>
-            <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block;">建筑</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">课设</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">个人</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">欧洲</span>
-            <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block;">研究中心</span>
-             <!--Academic/Built, Independent/Collaborative, Typology, Location-->
-        <p><br>
-        <p>2024.09 - 2025.01&nbsp;&nbsp;英国 · 剑桥
-        </p><br>
+                <hr style="width: 66.6%;margin: auto;"><br>
 
-        <hr style="width: 30%;margin: auto;"><br>
+                <a href="projects/silicon-farm.html">
+                    <h2 style="font-weight: normal;">硅场</h2>
+                </a><br>
+                <p>2024.09 - 2025.01&nbsp;&nbsp;英国 · 剑桥
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">课设</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">个人</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">欧洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">研究中心</span>
+                    <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <br><h2>。。。</h2>
+                <hr style="width: 66.6%;margin: auto;"><br>
 
-        <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <a href="projects/oasis-plan.html">
+                    <h2 style="font-weight: normal;">绿洲计划</h2>
+                </a><br>
+                <p>2022.03 - 2022.04&nbsp;&nbsp;中国 · 喀什
+                </p><br>
+                <p>
+                    <span style="background-color: black; color: white; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">建筑</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">课设</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">合作</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">亚洲</span>
+                    <span style="border: solid 0.1px; padding: 0 2px; margin: 0 1px; display: inline-block; font-size: 1rem;">住宅</span>
+                    <!--Academic/Built, Independent/Collaborative, Typology, Location-->
+                <p><br>
 
-        <a href="#"><h2><u>顶部</u>↑</h2></a>
+                <hr style="width: 66.6%;margin: auto;height: 2px;background-color: black; border: none;"><br>
+
+                <br><h2>. . .</h2>
+            </section>
+
+            <a href="#"><h2><u>顶部</u>↑</h2></a>
+        </div>
+
+        <!-- 右侧：文本 -->
+        <div class="body-right">
+            <div class="text-right">
+
+            </div>
+        </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateActiveLink(); // 🚀 页面加载后初始化下划线
+            updateNavLeftPosition(); // 🚀 初始化 `nav-left` 位置
+        });
+
+        // 🚀 **监听滚动，动态更新下划线**
+        window.addEventListener("scroll", updateActiveLink);
+
+        // 🚀 **监听窗口变化，更新 `nav-left` 位置**
+        window.addEventListener("resize", updateNavLeftPosition);
+
+        // 🚀 **监听导航栏点击，跳转到 `section` 并更新下划线**
+        document.querySelectorAll(".view-as a").forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (!targetSection) return;
+
+                let offset = window.innerHeight * 0.18; // ✅ 18vh 转换为像素
+                if (targetId === "grid") {
+                    const bodyMidWidth = document.querySelector(".body-mid")?.clientWidth || window.innerWidth;
+                    offset = (window.innerHeight * 0.18) - (bodyMidWidth * 0.3 / 6); // ✅ 计算 Grid 偏移量
+                }
+
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+
+                setTimeout(updateActiveLink, 1000);
+            });
+        });
+
+        // 🚀 **计算可见高度最大的 section，并更新 `active` 下划线**
+        function updateActiveLink() {
+            let maxVisibleHeight = 0;
+            let lockedSection = null;
+            
+            document.querySelectorAll("section").forEach(section => {
+                let rect = section.getBoundingClientRect();
+                let visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+                if (visibleHeight > maxVisibleHeight) {
+                    maxVisibleHeight = visibleHeight;
+                    lockedSection = section;
+                }
+            });
+
+            if (lockedSection) {
+                document.querySelectorAll(".view-as a").forEach(link => {
+                    link.classList.toggle("active", link.getAttribute("href").substring(1) === lockedSection.id);
+                });
+            }
+        }
+
+        // 🚀 **计算 nav-left 的 `top` 位置**
+        function updateNavLeftPosition() {
+            setTimeout(() => { // 🚀 延迟执行，确保 `clientWidth` 计算正确
+                const bodyMid = document.querySelector(".body-mid");
+                const navLeftViewAs = document.querySelector(".body-left .nav-left .view-as");
+                const targetBottomDisplay = document.getElementById("targetBottomValue"); // 结果输出
+
+                if (bodyMid && navLeftViewAs && targetBottomDisplay) {
+                    let targetBottom = bodyMid.clientWidth * 1.7 / 3; // 目标底部对齐高度
+                    let navHeight = navLeftViewAs.clientHeight; // `.view-as` 的自身高度
+
+                    navLeftViewAs.style.top = `${targetBottom - navHeight}px`; // 计算 `top` 位置
+
+                    // 🚀 **更新页面上的 `targetBottom` 计算值**
+                    targetBottomDisplay.innerText = Math.round(targetBottom) + " px"; // 显示整数 px 值
+                }
+            }, 100); // 🚀 100ms 延迟，确保 `bodyMid.clientWidth` 正确
+        }
+
+        // 🚀 **页面加载 & 监听窗口变化**
+        document.addEventListener("DOMContentLoaded", updateNavLeftPosition);
+        window.addEventListener("resize", updateNavLeftPosition);
+
+        
+        // 🚀 **监听滚动，确保 `section` 先滚动，滚完后才滚 `body`**
+        document.addEventListener("wheel", function (event) {
+            let currentSection = null;
+            document.querySelectorAll("section").forEach(section => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top <= 10 && rect.bottom >= window.innerHeight - (window.innerHeight * 0.18)) {
+                    currentSection = section;
+                }
+            });
+
+            if (!currentSection) return;
+
+            let atTop = currentSection.scrollTop === 0;
+            let atBottom = currentSection.scrollHeight - currentSection.scrollTop === currentSection.clientHeight;
+
+            if ((event.deltaY > 0 && atBottom) || (event.deltaY < 0 && atTop)) {
+                let nextSection = event.deltaY > 0 ? currentSection.nextElementSibling : currentSection.previousElementSibling;
+
+                if (nextSection) {
+                    let offset = window.innerHeight * 0.18;
+                    if (nextSection.id === "grid") {
+                        const bodyMidWidth = document.querySelector(".body-mid")?.clientWidth || window.innerWidth;
+                        offset = (window.innerHeight * 0.18) - (bodyMidWidth * 0.3 / 6);
+                    }
+
+                    let targetPosition = nextSection.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+
+                    setTimeout(updateActiveLink, 1000);
+                }
+            } else {
+                // 🚀 允许 `section` 内部滚动，不阻止默认滚动行为
+                if (!atTop && !atBottom) return;
+                document.body.style.overflowY = "hidden";
+                event.preventDefault();
+            }
+        });
+
+        // Showcase 轮播
+        document.addEventListener("DOMContentLoaded", function () {
+            const showcaseContainer = document.querySelector(".showcase-container");
+            const prevBtn = document.querySelector(".prev-btn");
+            const nextBtn = document.querySelector(".next-btn");
+            const images = document.querySelectorAll(".showcase-container a");
+            let currentIndex = 0;
+            let isTransitioning = false; // 防止过快切换
+
+            function updateSlide(index) {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                const offset = index * -100; // 每个 `a` 占 `100%`
+                showcaseContainer.style.transform = `translateX(${offset}%)`;
+
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 500);
+            }
+
+            nextBtn.addEventListener("click", function () {
+                currentIndex = (currentIndex + 1) % images.length; // 首尾相连
+                updateSlide(currentIndex);
+            });
+
+            prevBtn.addEventListener("click", function () {
+                currentIndex = (currentIndex - 1 + images.length) % images.length; // 向左循环
+                updateSlide(currentIndex);
+            });
+
+            // 🚀 **鼠标滚动切换**
+            showcaseContainer.addEventListener("wheel", function (event) {
+                if (event.deltaY > 0) {
+                    currentIndex = (currentIndex + 1) % images.length;
+                } else {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                }
+                updateSlide(currentIndex);
+                event.preventDefault();
+            });
+        });
+    </script>
 </body>
 </html>

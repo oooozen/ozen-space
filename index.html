@@ -39,23 +39,23 @@
             position: absolute;
             top: 5%;
             text-align: center;
-            font-size: 20px;
+            font-size: 24px;
             color: black;
         }
         /* 选择文本 */
         .choose-text {
             position: absolute;
             left: 5%;
-            bottom: 10%;
+            bottom: 5%;
             text-align: left;
-            font-size: 18px;
+            font-size: 24px;
         }
         /* 底部兴趣文本 */
         .interest-text {
             position: absolute;
             bottom: 5%;
             text-align: center;
-            font-size: 20px;
+            font-size: 24px;
         }
         /* 右上角 logo */
         .logo {
@@ -85,7 +85,6 @@
             position: relative;
             width: 100%;
             height: 100%;
-            cursor: pointer;
         }
         .circle-container .lowimg {
             display:flex;
@@ -97,53 +96,57 @@
             position: relative;
             width: 100%;
             height: 100%;
-            cursor: pointer;
+        }
+
+        body {
+            cursor: url('assets/img/cursor/cursor_work/cursor_work_20x20.cur'), auto; /* 光标 */
+            overflow: hidden;
+        }
+        a, button, .clickable {
+            cursor: url('assets/img/cursor/cursor_work/cursor_work_circle_bluedot1_20x20.cur'), pointer; /* 点击 */
         }
     </style>
 </head>
+
 <body>
 
     <!-- 顶部文字 -->
     <div class="top-text">
-        <a href="#" style="color: hwb(225 0% 0%);" onclick="redirectTo('work'); return false;">
-            <div>Job</div>
-            <div>工作</div>
-            <div>工作</div>
+        <a href="#" style="color: black;" onclick="redirectTo('work'); return false;">
+            <div>Job / 工作 / 工作</div>
         </a>
     </div>
 
     <!-- 选择文本 -->
-    <div class="choose-text">
+    <!-- <div class="choose-text">
         <span>
             <div>CHOOSE /</div>
             <div>选择 /</div>
             <div>選擇 /</div>
         </span>
-    </div>
+    </div> -->
 
     <!-- 底部兴趣文本 -->
     <div class="interest-text">
-        <a href="#" style="color: red;" onclick="redirectTo('personal'); return false;">
-            <div>Interest</div>
-            <div>个人</div>
-            <div>個人</div>
+        <a href="#" style="color: black;" onclick="redirectTo('personal'); return false;">
+            <div>Interest / 个人 / 個人</div>
         </a>
     </div>
 
     <!-- 右上角 logo -->
-    <a href="logo.html">
+    <!-- <a href="logo.html">
         <img src="logo.png" alt="Logo" class="logo">
-    </a>
+    </a> -->
 
     <!-- 中间图形 -->
     <div class="circle-container">
         <div class="upimg">
-            <a href="work/en/index.html">
+            <a href="#" style="color: black;" onclick="redirectTo('work'); return false;">
                 <img src="assets/img/fullsize/logo_body2.png" alt="Upper Part">
             </a>
         </div>
         <div class="lowimg">
-            <a href="personal/en/index.html">
+            <a href="#" style="color: black;" onclick="redirectTo('personal'); return false;">
                 <img src="assets/img/fullsize/logo_body_red.png" alt="Lower Part">
             </a>
         </div>
